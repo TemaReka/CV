@@ -174,7 +174,13 @@ table {
 }
 
 .scroll-container {
-  overflow-x: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Скрываем полосу прокрутки для Chrome, Safari и Opera */
 }
 
 .scroll-container::after {
