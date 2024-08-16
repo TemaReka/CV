@@ -173,7 +173,20 @@ table {
   }
 }
 
+.scroll-container {
+  overflow-x: auto;
+}
 
+.scroll-container::after {
+  content: ""; /* Пустой контент */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px; /* Ширина градиентного эффекта */
+  height: 100%; /* Высота градиента */
+  pointer-events: none; /* Чтобы градиент не мешал взаимодействию с содержимым */
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Градиентный фон */
+}
 table td {
   /* width: 30%; */
   /* border-top: 1px solid black; */
